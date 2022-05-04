@@ -1,2 +1,2 @@
-svc1/.drone.yml
-svc2/.drone.yml
+svc1/drone.yml
+svc2/drone.yml
