@@ -13,9 +13,6 @@ steps:
     repo: 103.153.255.227:5000/webapp
     dockerfile: Dockerfile
     insecure: true
-  trigger:
-    branch:
-    - master/authen
 - name: deliver
   image: 103.153.255.227:5000/drone-kubectl
   settings:
@@ -26,4 +23,4 @@ steps:
    kubernetes_token:
       from_secret: k8s_token
   commands:
-  - kubectl rollout restart deployment/nginx-deployment1 -n default
+  - kubectl rollout restart deployment/nginx-deployment -n default
